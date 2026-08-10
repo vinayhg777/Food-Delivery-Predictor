@@ -1,24 +1,53 @@
+/* ========================================
+   GLOBAL
+======================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #0b0f14;
-    color: #ffffff;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Navbar */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0f14;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
 .navbar {
     background: #0b0f14 !important;
     border-bottom: 1px solid #1e293b;
+    padding: 12px 25px;
+}
+
+.navbar-brand {
+    color: #ffffff !important;
 }
 
 .navbar-brand h1 {
     color: #ffffff !important;
-    font-size: 28px;
+    font-size: 30px;
+    margin: 0;
 }
 
 .navbar-brand span {
@@ -27,197 +56,456 @@ body {
 
 .nav-link {
     color: #ffffff !important;
+    font-size: 17px;
     margin-left: 20px;
     transition: 0.3s;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
     color: #2196f3 !important;
 }
 
-/* Hero */
+.navbar-toggler {
+    border-color: #2196f3 !important;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
 .hero {
-    min-height: 85vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 80px 20px;
+    padding: 100px 20px 60px;
     background: #0b0f14;
 }
 
 .hero-content {
-    max-width: 800px;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
 }
 
 .hero h1 {
-    font-size: 60px;
+    font-size: 64px;
     font-weight: 700;
-    margin-bottom: 20px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #ffffff !important;
+    text-align: center;
 }
 
 .hero h1 span {
-    color: #2196f3;
+    color: #2196f3 !important;
 }
 
 .hero p {
-    color: #94a3b8;
+    max-width: 800px;
+    margin: 0 auto 35px;
+    color: #94a3b8 !important;
     font-size: 20px;
-    margin-bottom: 35px;
+    line-height: 1.7;
 }
 
-/* Buttons */
+.hero-buttons {
+    text-align: center;
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
+
 .btn-blue {
     display: inline-block;
     background: #2196f3;
-    color: white;
+    color: #ffffff !important;
     padding: 14px 32px;
     border-radius: 8px;
-    text-decoration: none;
+    font-size: 17px;
     font-weight: 600;
     margin: 5px;
+    border: 1px solid #2196f3;
     transition: 0.3s;
 }
 
 .btn-blue:hover {
     background: #1976d2;
-    color: white;
+    border-color: #1976d2;
+    color: #ffffff !important;
     transform: translateY(-2px);
 }
 
 .btn-outline {
     display: inline-block;
-    border: 1px solid #2196f3;
-    color: #2196f3;
+    background: transparent;
+    color: #2196f3 !important;
     padding: 13px 31px;
     border-radius: 8px;
-    text-decoration: none;
+    font-size: 17px;
     font-weight: 600;
     margin: 5px;
+    border: 1px solid #2196f3;
     transition: 0.3s;
 }
 
 .btn-outline:hover {
     background: #2196f3;
-    color: white;
+    color: #ffffff !important;
 }
 
-/* Sections */
+
+/* ========================================
+   GENERAL SECTIONS
+======================================== */
+
 .section {
     padding: 80px 20px;
     background: #0f141b;
 }
 
+.section:nth-of-type(even) {
+    background: #0b0f14;
+}
+
 .section h2 {
     text-align: center;
-    font-size: 36px;
-    margin-bottom: 20px;
+    color: #ffffff !important;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
-.section p {
-    color: #94a3b8;
+.section-description {
+    max-width: 750px;
+    margin: 0 auto;
     text-align: center;
+    color: #94a3b8 !important;
+    font-size: 18px;
 }
 
-/* Cards */
+
+/* ========================================
+   CARDS
+======================================== */
+
 .card {
-    background: #151b23;
-    border: 1px solid #263241;
-    border-radius: 12px;
+    height: 100%;
     padding: 30px;
-    color: white;
+    background: #151b23 !important;
+    color: #ffffff !important;
+    border: 1px solid #263241 !important;
+    border-radius: 12px;
     transition: 0.3s;
 }
 
 .card:hover {
-    border-color: #2196f3;
+    border-color: #2196f3 !important;
     transform: translateY(-5px);
 }
 
 .card h3 {
-    color: #2196f3;
+    color: #2196f3 !important;
+    font-size: 23px;
     margin-bottom: 15px;
 }
 
 .card p {
+    color: #94a3b8 !important;
     text-align: left;
+    margin: 0;
 }
 
-/* Prediction form */
+
+/* ========================================
+   FEATURES
+======================================== */
+
+.features-section {
+    background: #0f141b;
+}
+
+
+/* ========================================
+   CALL TO ACTION
+======================================== */
+
+.cta-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: #0b0f14;
+    border-top: 1px solid #1e293b;
+    border-bottom: 1px solid #1e293b;
+}
+
+.cta-section h2 {
+    color: #ffffff;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.cta-section p {
+    color: #94a3b8;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+/* ========================================
+   PREDICTION PAGE
+======================================== */
+
+.prediction-page {
+    min-height: 100vh;
+    padding: 110px 20px 70px;
+    background: #0b0f14;
+}
+
 .prediction-container {
-    max-width: 700px;
-    margin: 120px auto 60px;
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
     padding: 40px;
-    background: #151b23;
-    border: 1px solid #263241;
+    background: #111820 !important;
+    border: 1px solid #263241 !important;
     border-radius: 12px;
 }
 
 .prediction-container h1 {
     text-align: center;
-    margin-bottom: 30px;
+    color: #ffffff !important;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
+.prediction-container > p {
+    text-align: center;
+    color: #94a3b8 !important;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+
+/* ========================================
+   FORM
+======================================== */
+
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .form-group label {
     display: block;
+    color: #ffffff !important;
+    font-size: 16px;
+    font-weight: 600;
     margin-bottom: 8px;
-    color: #cbd5e1;
 }
 
 .form-group input,
 .form-group select {
+    display: block;
     width: 100%;
-    padding: 12px;
-    background: #0b0f14;
-    color: white;
-    border: 1px solid #334155;
-    border-radius: 6px;
+    height: 52px;
+    padding: 12px 15px;
+    background: #0b0f14 !important;
+    color: #ffffff !important;
+    border: 1px solid #334155 !important;
+    border-radius: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.form-group input::placeholder {
+    color: #64748b !important;
 }
 
 .form-group input:focus,
 .form-group select:focus {
     outline: none;
-    border-color: #2196f3;
+    background: #0b0f14 !important;
+    color: #ffffff !important;
+    border-color: #2196f3 !important;
+    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.15) !important;
 }
 
-/* Prediction result */
+.form-group select option {
+    background: #111820;
+    color: #ffffff;
+}
+
+
+/* ========================================
+   PREDICTION BUTTON
+======================================== */
+
+.prediction-container button {
+    display: block;
+    width: 100%;
+    height: 52px;
+    margin-top: 30px;
+    padding: 12px 20px;
+    background: #2196f3 !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.prediction-container button:hover {
+    background: #1976d2 !important;
+    transform: translateY(-1px);
+}
+
+
+/* ========================================
+   PREDICTION RESULT
+======================================== */
+
 .prediction-result {
-    margin-top: 25px;
+    margin-top: 30px;
     padding: 20px;
-    background: #0b1724;
-    border: 1px solid #2196f3;
+    background: #0b1724 !important;
+    border: 1px solid #2196f3 !important;
     border-radius: 8px;
     text-align: center;
-    color: #2196f3;
-    font-size: 20px;
-    font-weight: bold;
+    color: #2196f3 !important;
+    font-size: 21px;
+    font-weight: 600;
 }
 
-/* Footer */
+.prediction-result * {
+    color: #2196f3 !important;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
 .footer {
-    background: #070a0e;
+    background: #070a0e !important;
     border-top: 1px solid #1e293b;
-    padding: 30px;
-    text-align: center;
-    color: #64748b;
+    color: #94a3b8;
+    padding: 40px 20px;
 }
 
-/* Mobile */
+.footer h1,
+.footer h2,
+.footer h3,
+.footer h4 {
+    color: #ffffff !important;
+}
+
+.footer p {
+    color: #94a3b8 !important;
+}
+
+.footer a {
+    color: #94a3b8 !important;
+    transition: 0.3s;
+}
+
+.footer a:hover {
+    color: #2196f3 !important;
+}
+
+
+/* ========================================
+   REMOVE OLD TEMPLATE ELEMENTS
+======================================== */
+
+.page-header {
+    background: #0b0f14 !important;
+    padding: 120px 20px 50px;
+}
+
+.page-header h1 {
+    color: #ffffff !important;
+}
+
+.breadcrumb-item,
+.breadcrumb-item a {
+    color: #94a3b8 !important;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
 @media (max-width: 768px) {
+
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .navbar-brand h1 {
+        font-size: 24px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        padding: 8px 0;
+    }
+
+    .hero {
+        min-height: 80vh;
+        padding: 100px 20px 50px;
+    }
+
     .hero h1 {
-        font-size: 40px;
+        font-size: 42px;
     }
 
     .hero p {
         font-size: 17px;
     }
 
+    .btn-blue,
+    .btn-outline {
+        display: block;
+        width: 90%;
+        max-width: 350px;
+        margin: 10px auto;
+    }
+
+    .section {
+        padding: 60px 20px;
+    }
+
+    .section h2 {
+        font-size: 30px;
+    }
+
+    .prediction-page {
+        padding: 90px 15px 40px;
+    }
+
     .prediction-container {
-        margin: 100px 20px 40px;
-        padding: 25px;
+        padding: 25px 20px;
+    }
+
+    .prediction-container h1 {
+        font-size: 32px;
+    }
+
+    .prediction-container > p {
+        font-size: 15px;
     }
 }
