@@ -1,3 +1,4 @@
+import os
 from flask import Flask,render_template,request
 import pandas as pd
 import joblib
@@ -69,4 +70,6 @@ def predict():
     return render_template('predict.html',prediction_text=prediction_text)
 
 if __name__ == "__main__":
-    app.run(debug=True,port=4000,host='0.0.0.0')
+    port = int(os.environ.get("PORT", 4000))
+    debug = os.environ.get("FLASK_DEBUG", "0") == "1"
+    app.run(debug=debug, port=port, host='0.0.0.0')
